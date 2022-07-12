@@ -42,35 +42,44 @@
         
     </div>
         <div class="col-md-7 col-lg-8">
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation">
             <div class="row g-3 borde-contacto">
             <div class="col-sm-6">
                 <label for="firstName" class="form-label tipografia">Nombre</label>
-                <input type="text" class="form-control tipografia" id="firstName" placeholder="Homero" value="" required>
+                <input type="text" class="form-control tipografia nombre-contacto" id="firstName" placeholder="Homero" value="Homero" required>
                 <div class="invalid-feedback">
                 Nombre no valido.
                 </div>
             </div>
             <div class="col-sm-6 tipografia">
                 <label for="lastName" class="form-label tipografia">Apellido</label>
-                <input type="text" class="form-control tipografia" id="lastName" placeholder="Simpson" value="" required>
+                <input type="text" class="form-control tipografia apellido-contacto" id="lastName" placeholder="Simpson" value="Simpson" required>
                 <div class="invalid-feedback tipografia">
                 Apellido no valido.
                 </div>
             </div>
+            <div class="col-sm-6 tipografia">
+                <label for="lastName" class="form-label tipografia">Edad</label>
+                <input type="text" class="form-control tipografia edad-contacto" id="lastName" placeholder="35" value="35" required>
+                <div class="invalid-feedback tipografia">
+                Edad no valida.
+                </div>
+            </div>
             <div class="col-12">
                 <label for="email" class="form-label tipografia">Email <span class="text-muted tipografia">(Opcional)</span></label>
-                <input type="email" class="form-control tipografia" id="email" placeholder="vos@ejemplo.com">
+                <input type="email" class="form-control tipografia email-contacto" id="email" placeholder="vos@ejemplo.com">
                 <div class="invalid-feedback tipografia">
                 Direccion de email no valido.
                 </div>
             </div>
 
-            <hr class="my-4">
+            <!-- <hr class="my-4">
             <div class="form-check">
             <input type="checkbox" class="form-check-input tipografia" id="save-info">
-            <label class="form-check-label tipografia" for="save-info">Guardar informacion para el futuro</label>
-            </div>
+            <label class="form-check-label tipografia" for="save-info">Guardar informacion para el futuro</label> -->
+            <!-- </div> -->
+        <button type="submit" class="btn btn-success tipografia">Guardar</button>
+        </form>
     </div>
     </main>
 
@@ -91,7 +100,6 @@
                 </a>
                 <span class="text-muted">2021, Mendez corp.</span>
               </div>
-          
               <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                 <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/vivirogo_titeres/?hl=es" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
                 <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/pg/valijamagica/posts/" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>

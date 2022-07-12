@@ -1,11 +1,13 @@
-alert("Vienvenido al Formulario de Contacto")
-
+let nombre = document.getElementsByClassName("nombre-contacto");
+let apellido = document.getElementsByClassName("apellido-contacto");
+let edad = document.getElementsByClassName("edad-contacto");
+let mail = document.getElementsByClassName("mail-contacto");
 class Usuario{
     constructor(nombre, apellido, edad, mail){
-        this.nombre = prompt("Ingrese su nombre aqui: ");
-        this.apellido = prompt("Ingrese su apellido aqui: ");
-        this.edad = Number(prompt("Ingrese su edad aqui: "));
-        this.mail = prompt("Ingrese su mail aqui: ");
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = Number (edad);
+        this.mail = mail
     }
     calcularTiempo (edad){
         var today = new Date();
@@ -14,7 +16,6 @@ class Usuario{
         var tiempo = nace - 1938;
         console.log("Un dato para que tengas presente: esta obra transcurre entre el dia de hoy y anecdotas de hace " + tiempo + " años antes de que nazcas.");
     }
-
 }
 
 let usuario1 = new Usuario ();

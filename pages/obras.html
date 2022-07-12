@@ -47,28 +47,28 @@
             <div class="row g-3">
             <div class="col-sm-6">
                 <label for="firstName" class="form-label tipografia">Nombre</label>
-                <input type="text" class="form-control tipografia" id="firstName" placeholder="Juan" value="" required>
+                <input type="text" class="form-control tipografia nombre-obras" id="firstName" placeholder="Juan" value="" required>
                 <div class="invalid-feedback">
                 Nombre no valido.
                 </div>
             </div>
             <div class="col-sm-6 tipografia">
                 <label for="lastName" class="form-label tipografia">Apellido</label>
-                <input type="text" class="form-control tipografia" id="lastName" placeholder="Perez" value="" required>
+                <input type="text" class="form-control tipografia apellido-obras" id="lastName" placeholder="Perez" value="" required>
                 <div class="invalid-feedback tipografia">
                 Apellido no valido.
                 </div>
             </div>
             <div class="col-12">
                 <label for="email" class="form-label tipografia">Email <span class="text-muted tipografia">(Opcional)</span></label>
-                <input type="email" class="form-control tipografia" id="email" placeholder="vos@ejemplo.com">
+                <input type="email" class="form-control tipografia email-obras" id="email" placeholder="vos@ejemplo.com">
                 <div class="invalid-feedback tipografia">
                 Direccion de email no valido.
                 </div>
             </div>
             <div class="col-md-5 tipografia">
                 <label for="country" class="form-label tipografia">Dia</label>
-                <select class="form-select tipografia" id="country" required>
+                <select class="form-select tipografia dia-obras" id="country" required>
                 <option value="">Seleccionar...</option>
                 <option>Sabado 7</option>
                 <option>Sabado 14</option>
@@ -78,43 +78,38 @@
                 Dia no valido.
                 </div>
             </div>
-            <div class="col-md-4 tipografia">
-                <label for="state" class="form-label tipografia">Horario</label>
-                <select class="form-select tipografia" id="state" required>
-                <option value="">Seleccionar...</option>
-                <option>17:00hs</option>
-                <option>19:00hs</option>
-                <option>21:00hs</option>
-                </select>
-                <div class="invalid-feedback tipografia">
-                Mes no valido.
-                </div>
-            </div>
-            <hr class="my-4">
-            <div class="form-check">
-            <input type="checkbox" class="form-check-input tipografia" id="save-info">
-            <label class="form-check-label tipografia" for="save-info">Guardar informacion para el futuro</label>
+                <div class="col-md-4 tipografia">
+                    <label for="state" class="form-label tipografia">Cantidad de entradas</label>
+                    <select class="form-select tipografia cantidad-obras" id="state" required>
+                    <option value="">Seleccionar...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    </select>
+                    <div class="invalid-feedback tipografia">
+                    horario no valido.
+                    </div>
             </div>
             <hr class="my-4">
             <h4 class="mb-3 tipografia">Formas de pago</h4>
             <div class="my-3">
             <div class="form-check">
-                <input id="credit" name="paymentMethod" type="radio" class="form-check-input tipografia" checked required>
+                <input id="credit" name="paymentMethod" type="radio" class="form-check-input tipografia tarjeta-obras" checked required>
                 <label class="form-check-label tipografia" for="credit">Tarjeta de Credito</label>
             </div>
             <div class="form-check">
-                <input id="debit" name="paymentMethod" type="radio" class="form-check-input tipografia" required>
+                <input id="debit" name="paymentMethod" type="radio" class="form-check-input tipografia tarjeta-obras" required>
                 <label class="form-check-label tipografia" for="debit">Tarjeta de Debito</label>
             </div>
             <div class="form-check tipografia">
-                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input tipografia" required>
+                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input tipografia efectivo-obras" required>
                 <label class="form-check-label tipografia" for="paypal">Efectivo</label>
             </div>
             </div>
             <div class="row gy-3">
             <div class="col-md-6">
                 <label for="cc-name" class="form-label tipografia">Nombre como figura en la Tarjeta</label>
-                <input type="text" class="form-control tipografia" id="cc-name" placeholder="" required>
+                <input type="text" class="form-control tipografia nombre-tarjeta-obras" id="cc-name" placeholder="" required>
                 <small class="text-muted tipografia"></small>
                 <div class="invalid-feedback tipografia">
                 Nombre no valido.
@@ -122,21 +117,21 @@
             </div>
             <div class="col-md-6">
                 <label for="cc-number" class="form-label tipografia">Numero de Tarjeta</label>
-                <input type="text" class="form-control tipografia" id="cc-number" placeholder="" required>
+                <input type="text" class="form-control tipografia numero-tarjeta-obras" id="cc-number" placeholder="" required>
                 <div class="invalid-feedback tipografia">
                 Numero de Tarjeta no valido.
                 </div>
             </div>
             <div class="col-md-3">
                 <label for="cc-expiration" class="form-label tipografia">Fecha de Expiracion</label>
-                <input type="text" class="form-control tipografia" id="cc-expiration" placeholder="" required>
+                <input type="text" class="form-control tipografia fecha-tarjeta-obras" id="cc-expiration" placeholder="" required>
                 <div class="invalid-feedback tipografia">
                 Fecha de Expiracion no valida.
                 </div>
             </div>
             <div class="col-md-3">
                 <label for="cc-cvv" class="form-label tipografia">Codigo de Seguridad</label>
-                <input type="text" class="form-control tipografia" id="cc-cvv" placeholder="" required>
+                <input type="text" class="form-control tipografia codigo-tarjeta-obras" id="cc-cvv" placeholder="" required>
                 <div class="invalid-feedback tipografia">
                 Codigo de Seguridad no valdio.
                 </div>
