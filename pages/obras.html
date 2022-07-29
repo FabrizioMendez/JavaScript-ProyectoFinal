@@ -47,28 +47,28 @@
             <div class="row g-3">
             <div class="col-sm-6">
                 <label for="firstName" class="form-label tipografia">Nombre</label>
-                <input type="text" class="form-control tipografia nombre-obras" id="firstName" placeholder="Juan" value="" required>
+                <input type="text" class="form-control tipografia" id="nombre-obras" placeholder="Juan" value="" required>
                 <div class="invalid-feedback">
                 Nombre no valido.
                 </div>
             </div>
             <div class="col-sm-6 tipografia">
                 <label for="lastName" class="form-label tipografia">Apellido</label>
-                <input type="text" class="form-control tipografia apellido-obras" id="lastName" placeholder="Perez" value="" required>
+                <input type="text" class="form-control tipografia" id="apellido-obras" placeholder="Perez" value="" required>
                 <div class="invalid-feedback tipografia">
                 Apellido no valido.
                 </div>
             </div>
             <div class="col-12">
                 <label for="email" class="form-label tipografia">Email <span class="text-muted tipografia">(Opcional)</span></label>
-                <input type="email" class="form-control tipografia email-obras" id="email" placeholder="vos@ejemplo.com">
+                <input type="email" class="form-control tipografia" id="mail-obras" placeholder="vos@ejemplo.com">
                 <div class="invalid-feedback tipografia">
                 Direccion de email no valido.
                 </div>
             </div>
             <div class="col-md-5 tipografia">
                 <label for="country" class="form-label tipografia">Dia</label>
-                <select class="form-select tipografia dia-obras" id="country" required>
+                <select class="form-select tipografia" id="dia-obras" required>
                 <option value="">Seleccionar...</option>
                 <option>Sabado 7</option>
                 <option>Sabado 14</option>
@@ -78,38 +78,49 @@
                 Dia no valido.
                 </div>
             </div>
-                <div class="col-md-4 tipografia">
-                    <label for="state" class="form-label tipografia">Cantidad de entradas</label>
-                    <select class="form-select tipografia cantidad-obras" id="state" required>
-                    <option value="">Seleccionar...</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    </select>
-                    <div class="invalid-feedback tipografia">
-                    horario no valido.
-                    </div>
+            <div class="col-md-4 tipografia">
+                <label for="state" class="form-label tipografia">Horario</label>
+                <select class="form-select tipografia" id="horario-obras" required>
+                <option value="">Seleccionar...</option>
+                <option>17:00hs</option>
+                <option>19:00hs</option>
+                <option>21:00hs</option>
+                </select>
+                <div class="invalid-feedback tipografia">
+                Mes no valido.
+                </div>
+            </div>
+            <hr class="my-4">
+            <hr class="my-4">
+            <!-- ____________________ -->
+            <!-- CANTIDAD DE ENTRADAS -->
+            <!-- ____________________ -->
+            <div class="col-sm-6 tipografia">
+                <label for="cantidad-entradas" class="form-label tipografia">Cantidad de Entradas</label>
+                <input type="text" class="form-control tipografia" id="cantidad-entradas" placeholder="1" required>
+                <div class="invalid-feedback tipografia">
+                Cantidad de Entradas no valida.
+                </div>
             </div>
             <hr class="my-4">
             <h4 class="mb-3 tipografia">Formas de pago</h4>
-            <div class="my-3">
-            <div class="form-check">
-                <input id="credit" name="paymentMethod" type="radio" class="form-check-input tipografia tarjeta-obras" checked required>
-                <label class="form-check-label tipografia" for="credit">Tarjeta de Credito</label>
+            <div class="col-md-4 tipografia">
+                <label for="state" class="form-label tipografia">Metodos de Pago</label>
+                <select class="form-select tipografia" id="metodo-de-pago" required>
+                <option value="">Seleccionar...</option>
+                <option value="credito">Tarjeta de Credito</option>
+                <option value="debito">Tarjeta de Debito</option>
+                <option value="efectivo">Efectivo</option>
+                </select>
+                <div class="invalid-feedback tipografia">
+                Metodo no Valido.
+                </div>
             </div>
-            <div class="form-check">
-                <input id="debit" name="paymentMethod" type="radio" class="form-check-input tipografia tarjeta-obras" required>
-                <label class="form-check-label tipografia" for="debit">Tarjeta de Debito</label>
-            </div>
-            <div class="form-check tipografia">
-                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input tipografia efectivo-obras" required>
-                <label class="form-check-label tipografia" for="paypal">Efectivo</label>
-            </div>
-            </div>
+
             <div class="row gy-3">
             <div class="col-md-6">
                 <label for="cc-name" class="form-label tipografia">Nombre como figura en la Tarjeta</label>
-                <input type="text" class="form-control tipografia nombre-tarjeta-obras" id="cc-name" placeholder="" required>
+                <input type="text" class="form-control tipografia" id="nombre-tarjeta" placeholder="" required>
                 <small class="text-muted tipografia"></small>
                 <div class="invalid-feedback tipografia">
                 Nombre no valido.
@@ -117,21 +128,21 @@
             </div>
             <div class="col-md-6">
                 <label for="cc-number" class="form-label tipografia">Numero de Tarjeta</label>
-                <input type="text" class="form-control tipografia numero-tarjeta-obras" id="cc-number" placeholder="" required>
+                <input type="text" class="form-control tipografia" id="numero-tarjeta" placeholder="" required>
                 <div class="invalid-feedback tipografia">
                 Numero de Tarjeta no valido.
                 </div>
             </div>
             <div class="col-md-3">
                 <label for="cc-expiration" class="form-label tipografia">Fecha de Expiracion</label>
-                <input type="text" class="form-control tipografia fecha-tarjeta-obras" id="cc-expiration" placeholder="" required>
+                <input type="text" class="form-control tipografia" id="fecha-tarjeta" placeholder="" required>
                 <div class="invalid-feedback tipografia">
                 Fecha de Expiracion no valida.
                 </div>
             </div>
             <div class="col-md-3">
                 <label for="cc-cvv" class="form-label tipografia">Codigo de Seguridad</label>
-                <input type="text" class="form-control tipografia codigo-tarjeta-obras" id="cc-cvv" placeholder="" required>
+                <input type="text" class="form-control tipografia" id="codigo-tarjeta" placeholder="" required>
                 <div class="invalid-feedback tipografia">
                 Codigo de Seguridad no valdio.
                 </div>
@@ -139,7 +150,7 @@
             </div>
         </div>
         <hr class="my-4">
-        <button class="w-100 btn btn-primary btn-lg tipografia" type="submit">Continuar con el Pago</button>
+        <button class="w-100 btn btn-primary btn-lg tipografia" type="submit" id="guardar-obras">Continuar con el Pago</button>
 
         <!-- Aca estan las imagenes del mapa y el museo -->
         <div class="imagenes-museo">

@@ -1,22 +1,60 @@
-let nombre = document.getElementsByClassName("nombre-contacto");
-let apellido = document.getElementsByClassName("apellido-contacto");
-let edad = document.getElementsByClassName("edad-contacto");
-let mail = document.getElementsByClassName("mail-contacto");
-class Usuario{
-    constructor(nombre, apellido, edad, mail){
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = Number (edad);
-        this.mail = mail
-    }
-    calcularTiempo (edad){
-        var today = new Date();
-        var year = today.getFullYear();
-        var nace = year - edad;
-        var tiempo = nace - 1938;
-        console.log("Un dato para que tengas presente: esta obra transcurre entre el dia de hoy y anecdotas de hace " + tiempo + " años antes de que nazcas.");
-    }
-}
+// _____________
+// CODIGO NUEVO
+// _____________
+// DEFINIMOS LAS VARIABLES DE LOS NOMBRES CONECTADNDOLO AL HTML
+let nombreContacto = "";
+let apellidoContacto = "";
+let edadContacto = "";
+let mailContacto = "";
 
-let usuario1 = new Usuario ();
-usuario1.calcularTiempo(usuario1.edad);
+// --------------------
+// ESTO NO SE PORQUE SE PONE ACA PERO UENO
+// ------------------------------
+let boton = document.getElementById("guardar-contacto");
+// --------------------------------------------------------------
+// ACA PONEMOS QUE EL IMPUT DE CADA CELDA ES EL DEL HTML DESEADO
+// --------------------------------------------------------------
+let inputNombre = document.getElementById("nombre-contacto");
+let inputApellido = document.getElementById("apellido-contacto");
+let inputEdad = document.getElementById("edad-contacto");
+let inputMail = document.getElementById("mail-contacto");
+// --------------------------------------------
+// AHORA PONEMOS EL EVENT LISTENER A LOS IMPUTS
+// --------------------------------------------
+inputNombre.addEventListener("input", () => {
+  nombreContacto = inputNombre.value;
+});
+inputApellido.addEventListener("input", () => {
+  apellidoContacto = inputApellido.value;
+});
+inputEdad.addEventListener("input", () => {
+  edadContacto = inputEdad.value;
+});
+inputMail.addEventListener("input", () => {
+  mailContacto = inputMail.value;
+});
+// _____________________
+// ACA MANDAMOS EL JSON
+// _____________________
+// -------------------------------------------
+// AHORA LE DECIMOS AL BOTON QUE HAGA LO SUYO
+// -------------------------------------------
+boton.addEventListener("click", () => {
+  alert(
+    nombreContacto +
+      " " +
+      apellidoContacto +
+      " " +
+      edadContacto +
+      " " +
+      mailContacto
+  );
+  const usuario = {
+    nombreContacto: nombreContacto,
+    apellidoContacto: apellidoContacto,
+    edadContacto: edadContacto,
+    mailContacto: mailContacto,
+  };
+  const enJSON = JSON.stringify(usuario);
+  localStorage.setItem("usuario", enJSON);
+});
