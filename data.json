@@ -1,0 +1,6 @@
+[
+    {"name": "1 entrada", "price": 100, "id": 1 },
+    {"name": "2 entradas", "price": 200, "id": 2 },
+    {"name": "3 entradas", "price": 300, "id": 3 },
+    {"name": "4 entradas", "price": 400, "id": 4 }
+]

@@ -107,3 +107,39 @@ boton.addEventListener("click", (e) => {
   console.log(ticketsPersona, entradasCompradas);
   console.log(cantidad);
 });
+// _________________________________________________
+// Aca tenemos lo que son las cajas de las entradas:
+// _________________________________________________
+// aca los llamamos por el name pero en el proyecto final deberiamos usar un id.
+function clickEnProducto(id){
+  // alert("click en " + id)
+  Swal.fire({
+      title: "click en",
+      text: id,
+      icon: "success",
+      confirmButtonText: "Continuar",
+  });
+}
+
+
+fetch("../data.json")
+  .then((resinicial) => resinicial.json())  
+  .then((res) => {
+      const miArray = res;
+// Aca estamos llamando al html desde js
+      let htmlAux = " ";
+      // en la plataforma esta armando con un forEach, pero es lo mismo.
+      for (let i = 0; i < miArray.length; i++) {
+          htmlAux = 
+              htmlAux + 
+              // le tenemos que poner " " a lo de ${miArray[i].name} porque es un string el nombre del pokemon, pero en el proyecto no haria falta.
+              `<div class="productos" onclick="clickEnProducto(${miArray[i].id})">
+                  <h3>${miArray[i].name}</h3>
+                  <p>$${miArray[i].price}</p>
+              </div>`;
+      }
+      document.getElementById("listadoDeProductos").innerHTML = htmlAux
+  })
+  .catch((e)=>{
+      console.log(e);
+  });

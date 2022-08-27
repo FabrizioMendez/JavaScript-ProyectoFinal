@@ -33,28 +33,14 @@ inputEdad.addEventListener("input", () => {
 inputMail.addEventListener("input", () => {
   mailContacto = inputMail.value;
 });
-// _____________________
-// ACA MANDAMOS EL JSON
-// _____________________
-// -------------------------------------------
-// AHORA LE DECIMOS AL BOTON QUE HAGA LO SUYO
-// -------------------------------------------
-boton.addEventListener("click", () => {
-  alert(
-    nombreContacto +
-      " " +
-      apellidoContacto +
-      " " +
-      edadContacto +
-      " " +
-      mailContacto
-  );
-  const usuario = {
-    nombreContacto: nombreContacto,
-    apellidoContacto: apellidoContacto,
-    edadContacto: edadContacto,
-    mailContacto: mailContacto,
-  };
-  const enJSON = JSON.stringify(usuario);
-  localStorage.setItem("usuario", enJSON);
-});
+// _______________________
+// aca esta el boton nuevo
+// _______________________
+function manejeElClick() {
+  Swal.fire({
+    title: "Gracias por completar el formulario",
+    text: nombreContacto + " " + apellidoContacto,
+    icon: "success",
+    confirmButtonText: "Continuar",
+  });
+}

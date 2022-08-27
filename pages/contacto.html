@@ -38,29 +38,32 @@
     <main class="bordear-contacto">
     <div class="py-5 text-center tipografia">
         
-        <h2 class="tipografia">Formulario de Contacto</h2>
+        <h2 class="tipografia">¿Que te parecio la obra ?</h2>
+        <h3 class="tipografia">Dejame un comentario y tus datos asi puedo mejorar y agradecerte.</h3>
         
     </div>
         <div class="col-md-7 col-lg-8">
-        <form class="needs-validation">
+            <!-- para que el boton ande y nos de el alert con los datos del formulario tenemos que poner: onsubmit="return false" -->
+        <form class="needs-validation" onsubmit="return false">
             <div class="row g-3 borde-contacto">
+                <textarea name="dejame tu comentario" id="" cols="100" rows="10" class="tipografia"></textarea>
             <div class="col-sm-6">
                 <label for="firstName" class="form-label tipografia">Nombre</label>
-                <input type="text" class="form-control tipografia" id="nombre-contacto" placeholder="Homero" value="Homero" required>
+                <input type="text" class="form-control tipografia" id="nombre-contacto" placeholder="Fabrizio" value="" required>
                 <div class="invalid-feedback">
                 Nombre no valido.
                 </div>
             </div>
             <div class="col-sm-6 tipografia">
                 <label for="lastName" class="form-label tipografia">Apellido</label>
-                <input type="text" class="form-control tipografia" id="apellido-contacto" placeholder="Simpson" value="Simpson" required>
+                <input type="text" class="form-control tipografia" id="apellido-contacto" placeholder="Mendez" value="" required>
                 <div class="invalid-feedback tipografia">
                 Apellido no valido.
                 </div>
             </div>
             <div class="col-sm-6 tipografia">
                 <label for="edad" class="form-label tipografia">Edad</label>
-                <input type="text" class="form-control tipografia" id="edad-contacto" placeholder="35" value="35" required>
+                <input type="text" class="form-control tipografia" id="edad-contacto" placeholder="23" value="" required>
                 <div class="invalid-feedback tipografia">
                 Edad no valida.
                 </div>
@@ -72,13 +75,12 @@
                 Direccion de email no valido.
                 </div>
             </div>
-
+            <!-- Aca esta el boton -->
             <hr class="my-4">
-            <!-- <div class="form-check">
-            <input type="checkbox" class="form-check-input tipografia" id="save-info">
-            <label class="form-check-label tipografia" for="save-info">Guardar informacion para el futuro</label>
-            </div> -->
-        <button type="submit" class="btn btn-success tipografia" id="guardar-contacto">GUARDAR</button>
+        <button class="btn btn-success tipografia" id="guardar-contacto" onclick="manejeElClick()">GUARDAR</button>
+        <!-- aca dejo todo lo que le fui sacando al boton para que ande.
+            type="submit" 
+         -->
         </form>
     </div>
     </main>
@@ -119,7 +121,8 @@
 
 
 
-
+<!-- Aca esta el script de sweet alert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="../js/contacto.js"></script>
 <!-- Aca esta la cosa del bunddle -->

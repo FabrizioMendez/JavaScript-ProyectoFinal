@@ -325,7 +325,12 @@ nav {
   justify-content: center; }
   .bordear-obras .borde-obras {
     margin-left: 250px;
-    margin-right: 250px; }
+    margin-right: 250px;
+  }
+  .borde-obras.titulo-kasperliano{
+    margin-right: auto;
+    margin-left: auto;
+  }
 
 @media only screen and (max-width: 576px) {
   .baner-div {
@@ -409,3 +414,21 @@ body {
 .tipografia {
   font-family: 'Merriweather', serif;
   color: black; }
+
+  /* Aca esta lo que serian los estilos de las cajas de entradas de la pag de obras: */
+.productos{
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  background-color: #ffd3a1 ;
+
+}
+.lista{
+  display: flex;
+  flex-direction: row;
+}
